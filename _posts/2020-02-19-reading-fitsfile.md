@@ -8,7 +8,7 @@ categories: astropy
 If you are working from a jupyter notebook, you should be able to see in the top
 left-hand corner the location the notebook currently thinks it's in *relative to
 your home directory*.  
-<img src="https://sheffield-supernova.github.io/phy319_blog/img/jupyter_loc.png">
+<img src="{{site.baseurl}}/assets/img/jupyter_loc.png">
 i.e. in this image, the notebook is working in the home directory (confusingly
 represented by a single `/`).
 If you want to access a specific file, you will need to define it in its current
@@ -16,8 +16,8 @@ location relative to where the notebook is currently working from or change the
 notebook's working location.
 For the sake of this example, I've got the data for SN 2020ue (located in a
 directory `2020ue` in my home directory), which means the
-science data, taken with the "B"-filter are located in the directory: `2020ue/2020-01-29/SCIENCE/FILT_B/`.
-To read in the header information for one of the files (`r0606633.fits`)
+science data, taken with the "B"-filter, are located in the directory: `2020ue/2020-01-29/SCIENCE/FILT_B/`.
+To read in the header information for one of the files (`r0606633.fits`) I use:
 {% highlight python %}
   import astropy #loads up astropy
   from astropy.io import fits #makes the fits package available
@@ -25,7 +25,7 @@ To read in the header information for one of the files (`r0606633.fits`)
   hdu.info() #prints out basic information about the header (78 entries)
             #and the image (1092 x 736 pixels)                
 {% endhighlight %}
-For pt5m there is only on set of "header + image", which means it is given the
+For pt5m there is only one set of "header + image", which means it is given the
 number 0 (if there were more, they would be numbered 1, 2, and so on).
 To get the information that is in the header:
 
