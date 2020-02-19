@@ -8,7 +8,7 @@ categories: astropy
 If you are working from a jupyter notebook, you should be able to see in the top
 left-hand corner the location the notebook currently thinks it's in *relative to
 your home directory*.  
-<img src="{{site.baseurl}}/assets/img/jupyter_loc.png">
+<img src="{{site.baseurl}}/assets/img/jupyter_loc.png"><br>
 i.e. in this image, the notebook is working in the home directory (confusingly
 represented by a single `/`).
 If you want to access a specific file, you will need to define it in its current
@@ -45,11 +45,11 @@ print(value)          #yields SN2020ue
 You can see the whole header by running:
 {% highlight python %}
 print(hdr.keys)
-{% endhighlight % }
+{% endhighlight %}
 
 If you are only interested in the values belonging to a set of keywords, you can
  make a loop and create a corresponding list of the values:
- {% highlight python %}
+{% highlight python %}
 mykeys = ["NAXIS1", "RA", "CRPIX1", "OBJECT", "TYPE", "TELE"] #just an example
 myvals = [] #creates an empty list
 for i in range(len(mykeys)): #step through the array mykeys
