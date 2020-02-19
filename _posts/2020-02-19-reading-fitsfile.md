@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Reading a fits file"
+title:  "Reading a fits file header"
 date:   2020-02-19 11:00:00 +0000
 categories: astropy
 ---
@@ -8,7 +8,7 @@ categories: astropy
 If you are working from a jupyter notebook, you should be able to see in the top
 left-hand corner the location the notebook currently thinks it's in *relative to
 your home directory*.  
-<img src="../img/jupyter_loc.png">
+<img src="https://sheffield-supernova.github.io/phy319_blog/img/jupyter_loc.png">
 i.e. in this image, the notebook is working in the home directory (confusingly
 represented by a single `/`).
 If you want to access a specific file, you will need to define it in its current
@@ -45,7 +45,7 @@ print(value)          #yields SN2020ue
 You can see the whole header by running:
 {% highlight python %}
 print(hdr.keys)
-{% endhighlight %}
+{% endhighlight % }
 
 If you are only interested in the values belonging to a set of keywords, you can
  make a loop and create a corresponding list of the values:
