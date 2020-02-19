@@ -21,7 +21,7 @@
 title: "PHY319 supernova blog"
 email:
 description: ""
-baseurl: "phy319_blog" # the subpath of your site, e.g. /blog
+baseurl: "/phy319_blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ""
 github_username:  sheffield-supernova
