@@ -8,7 +8,7 @@ categories: astropy
 If you are working from a jupyter notebook, you should be able to see in the top
 left-hand corner the location the notebook currently thinks it's in *relative to
 your home directory*.  
-<img src="{{site.baseurl}}/assets/img/jupyter_loc.png"><br>
+<img src="/assets/img/jupyter_loc.png"><br>
 i.e. in this image, the notebook is working in the home directory (confusingly
 represented by a single `/`).
 If you want to access a specific file, you will need to define it in its current
