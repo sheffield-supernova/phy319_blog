@@ -24,14 +24,14 @@ To read in the header information for one of the files (`r0606633.fits`)
   hdu = fits.open("2020ue/2020-01-29/SCIENCE/FILT_B/r0606633.fits")
   hdu.info() #prints out basic information about the header (78 entries)
             #and the image (1092 x 736 pixels)                
-{% endhighlight}
+{% endhighlight %}
 For pt5m there is only on set of "header + image", which means it is given the
 number 0 (if there were more, they would be numbered 1, 2, and so on).
 To get the information that is in the header:
 
 {% highlight python %}
   hdr = hdu[0].header # 0 because this was the first and only data in the file              
-{% endhighlight}
+{% endhighlight %}
 The header is composed of a series of entries that make up a "dictionary", where
  each entry is composed of a "keyword" that maps to a "value".  For example, in
 this fits header "OBJECT" maps to "SN2020ue".
@@ -40,12 +40,12 @@ These values can be accessed by:
 value = hdr["OBJECT"] #i.e. VALUE = hdr[KEYWORD] (note the keyword
                       #needs to be surrounding by speech marks)
 print(value)          #yields SN2020ue
-{% endhighlight}
+{% endhighlight %}
 
 You can see the whole header by running:
 {% highlight python %}
 print(hdr.keys)
-{% endhighlight &}
+{% endhighlight %}
 
 If you are only interested in the values belonging to a set of keywords, you can
  make a loop and create a corresponding list of the values:
