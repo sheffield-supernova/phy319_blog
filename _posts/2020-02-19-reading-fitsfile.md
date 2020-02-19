@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Reading a fits file"
-date:   2020-02-20 11:00:00 +0000
+date:   2020-02-19 11:00:00 +0000
 categories: astropy
 ---
 
