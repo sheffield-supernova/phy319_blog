@@ -19,7 +19,7 @@ An empty list can be initialised by using:
 newlist = [] #note the square brackets
 {% endhighlight %} 
 
-and new elements can be added to list (empty or not) by using the `append` command:
+and new elements can be added to a list (empty or not) by using the `append` "attribute":
 
 {% highlight python %}
 newlist.append(newvar) #add newvar to the end of newlist
@@ -44,7 +44,7 @@ newlist = [1,2,3,4,5,6]
 i = 1 #index for the second element
 print(newlist[i]) #prints out 2
 {% endhighlight %}
-The implication of this is that the last element of the list is `len(newlist) - 1`.
+The implication of this is that the last element of the list has an index `len(newlist) - 1` or in this case `6`.
 
 If we want to through each element in the list, we can iterate over the 
 list, using a `for` loop (with the `range` function - which gives a series of numbers, ranging from `0` to `len(newlist) - 1`):
@@ -66,9 +66,11 @@ mean "list".
 
 
 **The dictionary**
+
 A "dictionary" or "dict" is an associative array, where entries are 
-grouped into pairs: a "key" and a "value".  This is much like the 
+grouped into pairs: a "key" and its associated "value".  This is much like the 
 entries found in a FITS header.
+
 An empty dictionary can be invoked as:
 
 {% highlight python %}
@@ -90,9 +92,12 @@ Accessing the elements in a dict is similar to that for a list, except one does 
 {% highlight python %}
 print(newdictionary["binning"]) #prints the value 2
 {% endhighlight %}
-Note: that "binning" must be enclosed in quotes, because it is not a variable itself - it's phrase.  If you assigned the phrase "binning" to a variable you could instead use:
+
+Note: that "binning" must be enclosed in quotes, because it is not a variable itself - it's a phrase.  If you assigned the 
+phrase "binning" to a variable you could instead use:
+
 {% highlight python %}
-mykey = "binning"
+mykey = "binning" # i.e. print(mykey) would print out "binning"
 print(newdictionary[mykey]) #prints the value 2
 {% endhighlight %}
 
