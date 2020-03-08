@@ -22,7 +22,8 @@ using `CCDData.read(filename, unit='adu')`,  and store the data in a list.
 You will then need to read in the single *master bias* image for that
 configuration.
 
-**This is correct**
+##This is incorrect! - IGNORE##
+
 The set of dark images can then have the bias levels removed using:
 
 {% highlight python %}
@@ -32,7 +33,9 @@ dark_biassub = ccdproc.subtract_bias(darklist, master_bias)
 #configuration
 {% endhighlight %}
 
-**Try this instead**
+
+##Try this instead!##
+
 `ccdproc.subtract_bias` does not work on loops - only on individual frames!
 
 {% highlight python %}
