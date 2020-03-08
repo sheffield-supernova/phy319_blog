@@ -22,6 +22,7 @@ using `CCDData.read(filename, unit='adu')`,  and store the data in a list.
 You will then need to read in the single *master bias* image for that
 configuration.
 
+**This is correct**
 The set of dark images can then have the bias levels removed using:
 
 {% highlight python %}
@@ -31,5 +32,24 @@ dark_biassub = ccdproc.subtract_bias(darklist, master_bias)
 #configuration
 {% endhighlight %}
 
+**Try this instead**
+`ccdproc.subtract_bias` does not work on loops - only on individual frames!
+
+{% highlight python %}
+dark_biassub = ccdproc.subtract_bias(dark, master_bias)
+#where dark is an individual dark image read in by CCDData.read
+#master_bias is the master bias frame for that detector
+#configuration
+{% endhighlight %}
+
+Let's say you have read in each dark image, using `CCDData.read`, and you 
+have a list of these called `darkdata`, you can create a list of bias subtracted
+dark data `dark_biassub` by:
+
+{% highlight python %}
+for i in range(len(darkdata)):
+    dark_biassub.append(ccdproc.subtract_bias(darkdata[i], master_bias))
+{% endhighlight %}
+
 You can then construct a master dark frame using `ccdproc.combine`, just as you did
-with the bias images.
+with the bias images, but now for a list containing all the bias subtracted dark data.
