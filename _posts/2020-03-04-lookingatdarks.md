@@ -36,7 +36,9 @@ dark_biassub = ccdproc.subtract_bias(darklist, master_bias)
 
 ## Try this instead! ##
 
-`ccdproc.subtract_bias` does not work on loops - only on individual frames!
+`ccdproc.subtract_bias` does not work on list - only on individual frames! So, if 
+you want it to work on batches of data, you have to run the reduction on
+individual frames inside a loop.
 
 {% highlight python %}
 dark_biassub = ccdproc.subtract_bias(dark, master_bias)
