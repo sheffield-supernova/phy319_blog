@@ -25,4 +25,15 @@ darksub = ccdproc.subtract_dark(flat, masterdark, \
 
 In this example we have explicitly defined the exposure times of the dark (`dark_exposure`) and the data to be corrected (`data_exposure`).  The value `scale = True` tells `subtract_dark` to scale the dark counts in each pixel from the exposure time of the dark to the exposure time of the flat.
 
+### Side Note
+The exposure times given for `dark_exposure` and `data_exposure` do not necessarily need the units for seconds (this is optional).  If you want to use units, you need to make sure you have run:
+
+{% highlight python %}
+import astropy.units as u
+{% endhighlight%}
+
+to make units handling available.  `u.s` just assigns the units of seconds (i.e. `s`) available from the package `astropy.units` that we have imported under the alias `u`.
+
+### Resuming normal service
+
 As the pt5m data have set header keywords for all exposures (irrespective of the type of the exposure - e.g. bias, flat, dark or science) we can instead, leaving out the `dark_exposure` and `data_exposure` variables, just say `exposure_time = "EXPTIME"`, where `EXPTIME` is just the header keyword in all pt5m FITS files for the exposure time.
