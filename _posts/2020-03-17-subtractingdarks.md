@@ -18,7 +18,9 @@ You then need to employ the task `subtract_dark`, for which more information can
 To subtract the master dark image `masterdark`, with exposure time 60s, from an individual flat field image called `flat` that has an exposure time of 2s (note these are just dummy values for illustration), we will ask `subtract_dark` to scale the counts in `masterdark` to match the exposure time of the flat field.
 
 {% highlight python %}
-darksub = ccdproc.subtract_dark(flat, masterdark, dark_exposure = 60.0*u.s, data_exposure = 2.0*u.s, scale = True, exposure_unit='adu')
+darksub = ccdproc.subtract_dark(flat, masterdark, \
+   dark_exposure = 60.0*u.s, data_exposure = 2.0*u.s, \
+   scale = True, exposure_unit='adu')
 {% endhighlight %}
 
 In this example we have explicitly defined the exposure times of the dark (`dark_exposure`) and the data to be corrected (`data_exposure`).  The value `scale = True` tells `subtract_dark` to scale the dark counts in each pixel from the exposure time of the dark to the exposure time of the flat.
