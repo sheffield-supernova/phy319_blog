@@ -32,6 +32,6 @@ that some of the bright, non-stellar sources are removed and the image looks muc
 smoother.
 
 
-(* note *: the alignment step itself is not something you will asked to do yourselves,
+(* note *: the alignment step itself is not something you will be asked to do yourselves,
 but removal of non-stellar cosmic ray sources is an important step to facilitate
 a good alignment solution)
