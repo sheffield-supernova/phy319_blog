@@ -45,4 +45,4 @@ bkg_mean = phot_table['aperture_sum_1']/skyann.area
 bkg_sum = bkg_mean * aper.area
 #list of background subtracted counts for each source
 obj_counts = phot_table['aperture_sum_0'] - bkg_sum
-{% endhiglight %}
+{% endhighlight %}
