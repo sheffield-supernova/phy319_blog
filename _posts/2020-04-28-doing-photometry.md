@@ -39,9 +39,10 @@ There are some useful attributes for apertures you have defined, but perhaps one
 
 {% highlight python %}
 #to get mean background in the annulus per pixel
-bkg_mean = phot_table['aperture_sum_1']/skyann.area #total counts divided by area
+bkg_mean = phot_table['aperture_sum_1']/skyann.area
+#total counts divided by area
 #calculate the total number of counts due to the sky in the circular aperture
 bkg_sum = bkg_mean * aper.area
-#list of background subtracted counts for each source 
+#list of background subtracted counts for each source
 obj_counts = phot_table['aperture_sum_0'] - bkg_sum
 {% endhiglight %}
