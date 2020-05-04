@@ -40,7 +40,11 @@ Adding the images together, increases the number of counts (or electrons) from t
 If we take an average, then for each pixel in the input images, with counts in ADU of $n_{i}(ADU)$, we are calculating the mean:
 
 $
-\overline{n(ADU)} = \frac{\sum^{N}_{i}n_{i}(ADU)}{N} = \frac{\sum^{N}_{i}n_{i}(e^{-})}{N \times gain}
+\overline{n(ADU)} = \frac{\sum^{N}_{i}n_{i}(ADU)}{N}
+$
+
+$
+= \frac{\sum^{N}_{i}n_{i}(e^{-})}{N \times gain}
 $
 
 So the effective gain of the averaged image is $N \times gain$.  The final read noise for an averaged frame becomes $R_{TOT} = \frac{R_{i}}{\sqrt{N}}$.
