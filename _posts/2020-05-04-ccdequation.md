@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "CCD Equation"
+mathjax: true
 date:   2020-05-04 09:00:00 +0000
 categories: photometry
 ---
