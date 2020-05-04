@@ -34,7 +34,7 @@ If you have multiple images that you have combined in some way, the method by wh
 
 ### Summations
 
-Adding the images together, increases the number of counts (or electrons) from the source, in effect giving a total exposure time $ t_{TOT} = \sum^{N}_{i} t_{i} $
+Adding the images together, increases the number of counts (or electrons) from the source, in effect giving a total exposure time $ t_{TOT} = \sum_{i}^{N} t_{i} $
 
 (if there are $ N $ images, of duration $ t_{i} $).  If the images are taken with an identical readout, then the effective gain of the combined image is the _same_ as for the individual images.  There is, however, a price to pay for having multiple readouts: the total readnoise per pixel is increased $R_{TOT} = \sqrt{N}R_{i}$.
 
