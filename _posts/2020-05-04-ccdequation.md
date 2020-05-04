@@ -34,7 +34,7 @@ If you have multiple images that you have combined in some way, the method by wh
 
 ### Summations
 
-Adding the images together, increases the number of counts (or electrons) from the source, in effect giving a total exposure time $ t_{TOT} = \sum_{i}^{N} t_{i} $
+Adding the images together, increases the number of counts (or electrons) from the source, in effect giving a total exposure time $ t_{TOT} = \sum\limits_{i}^{N} t_{i} $
 
 (if there are $ N $ images, of duration $ t_{i} $).  If the images are taken with an identical readout, then the effective gain of the combined image is the _same_ as for the individual images.  There is, however, a price to pay for having multiple readouts: the total readnoise per pixel is increased $R_{TOT} = \sqrt{N}R_{i}$.
 
@@ -42,11 +42,7 @@ Adding the images together, increases the number of counts (or electrons) from t
 If we take an average, then for each pixel in the input images, with counts in ADU of $n_{i}(ADU)$, we are calculating the mean:
 
 $
-\overline{n(ADU)} = \frac{\sum^{N}_{i}n_{i}(ADU)}{N}
-$
-
-$
-= \frac{\sum^{N}_{i}n_{i}(e^{-})}{N \times gain}
+\overline{n(ADU)} = \frac{\sum_{i}^{N} n_{i}(ADU)}{N} = \frac{\sum_{i}^{N} n_{i}(e^{-})}{N \times gain}
 $
 
 So the effective gain of the averaged image is $N \times gain$.  The final read noise for an averaged frame becomes $R_{TOT} = \frac{R_{i}}{\sqrt{N}}$.
