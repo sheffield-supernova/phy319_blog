@@ -12,6 +12,6 @@ The `gain` is a conversion factor between the charge in a pixel and converts it 
 Importantly, to evaluate the uncertainties correctly, in particular the Poisson statistics associated with the number of photons received, this must be done in units of electrons.
 
 
-
+$a + b = 3$
 
 ## Photometry
