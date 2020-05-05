@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "CCD Equation I"
+title:  "CCD photometry I"
 date:   2020-05-03 09:00:00 +0000
 categories: photometry
 ---
