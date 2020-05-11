@@ -14,7 +14,7 @@ $
 F_{0,\nu}(Jy) = (2.9979246)^{-1} \times 10^{5} \lambda_{eff}^{2} F_{0,\lambda}(\mathrm{ergs\,s^{-1}\,cm^{-2}\AA^{-1}})
 $
 
-You will need to derive $F_{0,\lambda}(\mathrm{ergs\,s^{-1}\,cm^{-2}\AA^{-1}})$ for your filters (for Vega, defined as magnitude zero), and then calculate the corresponding flux densities for your SN from the absolute magnitudes that you have derived.
+You will need to derive $F_{0,\lambda}(\mathrm{ergs\,s^{-1}\,cm^{-2}\overset{\circ}{\mathrm {A}}^{-1}})$ for your filters (for Vega, defined as magnitude zero), and then calculate the corresponding flux densities for your SN from the absolute magnitudes that you have derived.
 
 To calculate the apparent luminosity, you will then need to integrate (think of the Trapezium rule) over the spectral energy distribution (for which you have photometry at four discrete wavelengths).  This will allow you to derive the _flux_ in units of $\mathrm{ergs\,s^{-1}\,cm^{-2}}$.
 
